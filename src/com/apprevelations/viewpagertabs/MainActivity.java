@@ -13,14 +13,14 @@ import android.widget.Button;
 
 @SuppressLint("NewApi")
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener
-		 {
+{
 
 	private ViewPager viewPager;
 	private TabsPagerAdapter mAdapter;
 	private ActionBar actionBar;
 	
 	// Tab titles
-	private String[] tabs = { "Tab1", "Tab2", "Tab3" };
+	private String[] Tabs = { "Tab1", "Tab2", "Tab3" };
 
 	@SuppressLint("NewApi")
 	@Override
@@ -28,10 +28,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		super.onCreate(savedInstanceState);
 		
 		
-		 setContentView(R.layout.activity_main);
+		    setContentView(R.layout.activity_main);
 		 
-	        // Initilization
-	        viewPager = (ViewPager) findViewById(R.id.pager);
+	       
+	        viewPager = (ViewPager) findViewById(R.id.Vpager);
 	        actionBar = getActionBar();
 	        mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
 	 
@@ -40,7 +40,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);       
 	 
 	        // Adding Tabs
-	        for (String tab_name : tabs) {
+	        for (String tab_name : Tabs) {
 	            actionBar.addTab(actionBar.newTab().setText(tab_name)
 	                    .setTabListener(this));
 	        }
@@ -52,7 +52,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 
 	            @Override
 	            public void onPageSelected(int position) {
-	                // on changing the page
+	               
 	                // make respected tab selected
 	                actionBar.setSelectedNavigationItem(position);
 	            }
@@ -73,7 +73,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 
 	    @Override
 	    public void onTabSelected(Tab tab, FragmentTransaction ft) {
-	        // on tab selected
+	        
 	        // show respected fragment view
 	        viewPager.setCurrentItem(tab.getPosition());
 	    }
