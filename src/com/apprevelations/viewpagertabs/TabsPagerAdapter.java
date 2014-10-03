@@ -16,19 +16,19 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 
 		switch (index) {
 		case 0:
-			// Tab1 fragment activity
+			// Tab1 fragment 
 			return new Tab1();
 		case 1:
-			// Tab2 fragment activity 
+			// Tab2 fragment 
 			return new Tab2();
 		case 2:
-			// Tab3 fragment activity
+			// Tab3 fragment
 			return new Tab3();
 		}
 
 		return null;
 	}
-
+      
 	@Override
 	public int getCount() {
 		// get item count - equal to number of tabs

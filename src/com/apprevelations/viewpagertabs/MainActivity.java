@@ -45,28 +45,29 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	                    .setTabListener(this));
 	        }
 	 
-	        /**
-	         * on swiping the viewpager make respective tab selected
-	         * */
+	        
+	        // Setting a PageChangeListener on ViewPager
+	         
 	        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 	 
 	            @Override
 	            public void onPageSelected(int position) {
 	               
-	                // make respected tab selected
+	            	//Select respective Tab
 	                actionBar.setSelectedNavigationItem(position);
 	            }
 	 
 	            @Override
 	            public void onPageScrolled(int arg0, float arg1, int arg2) {
-	            }
+	            }   
 	 
 	            @Override
 	            public void onPageScrollStateChanged(int arg0) {
 	            }
 	        });
+	    
 	    }
-	 
+	         
 	    @Override
 	    public void onTabReselected(Tab tab, FragmentTransaction ft) {
 	    }
@@ -74,7 +75,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	    @Override
 	    public void onTabSelected(Tab tab, FragmentTransaction ft) {
 	        
-	        // show respected fragment view
+	        //on tab selection show respective fragment view. 
 	        viewPager.setCurrentItem(tab.getPosition());
 	    }
 	 
